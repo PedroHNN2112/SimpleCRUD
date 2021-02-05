@@ -1,15 +1,13 @@
 package com.pedrohenrique.Entity;
 
 public class Pessoa {
-    private int id;
     private String CPF;
     private String nome;
     private int idade;
     private String telefone;
 
     //constructor
-    public Pessoa(int id, String cpf, int idade, String telefone, String nome){
-        this.id = id;
+    public Pessoa(String cpf, int idade, String telefone, String nome){
         this.CPF = cpf;
         this.idade = idade;
         this.telefone = telefone;
@@ -20,14 +18,6 @@ public class Pessoa {
     public Pessoa(){}
 
     //gets e sets:
-
-    public int getId(){
-        return id;
-    }
-
-    public void setId(int id){
-        this.id = id;
-    }
 
     public String getCPF() {
         return CPF;

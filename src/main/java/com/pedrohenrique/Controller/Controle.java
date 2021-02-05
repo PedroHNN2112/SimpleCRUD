@@ -21,14 +21,14 @@ public class Controle {
         return servico.getAllPessoas();
     }
 
-    @RequestMapping(value = "/{id}", method = RequestMethod.GET) //pegar algo pelo ID
-    public Pessoa getPessoaID(@PathVariable("id") int id){
-        return this.servico.getPessoaID(id);
+    @RequestMapping(value = "/{cpf}", method = RequestMethod.GET) //pegar algo pelo ID
+    public Pessoa getPessoaID(@PathVariable("cpf") String CPF){
+        return this.servico.getPessoaID(CPF);
     }
 
-    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE) //deletar algo pelo ID
-    public void deletePessoaID(@PathVariable("id") int id){
-        servico.removePessoaID(id);
+    @RequestMapping(value = "/{cpf}", method = RequestMethod.DELETE) //deletar algo pelo ID
+    public void deletePessoaID(@PathVariable("cpf") String CPF){
+        servico.removePessoaID(CPF);
     }
 
     @RequestMapping(method=RequestMethod.PUT, consumes= MediaType.APPLICATION_JSON_VALUE)//editar

@@ -17,12 +17,12 @@ public class Servicos {
         return pessoaDao.getAllPessoas();
     }
 
-    public Pessoa getPessoaID(int id){
-        return this.pessoaDao.getPessoaID(id);
+    public Pessoa getPessoaID(String CPF){
+        return this.pessoaDao.getPessoaID(CPF);
     }
 
-    public void removePessoaID(int id) {
-        this.pessoaDao.removePessoaID(id);
+    public void removePessoaID(String CPF) {
+        this.pessoaDao.removePessoaID(CPF);
     }
     public void updatePessoa(Pessoa pessoa){
         this.pessoaDao.updatePessoa(pessoa);
