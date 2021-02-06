@@ -4,12 +4,13 @@ import com.pedrohenrique.Entity.Pessoa;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.util.Collection;
 
 @Repository
 @Qualifier("PostgreSQLPessoa")
 public class PGSQLPessoa implements PessoaDAO{
-
 
 
     @Override
