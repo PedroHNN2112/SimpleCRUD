@@ -37,7 +37,7 @@ public class PGSQLPessoa implements PessoaDAO{
             colecaoPessoa.add(pessoa);
         }
 
-
+        Connect.closeConnection(connect);
         return colecaoPessoa;
     }
 
@@ -58,7 +58,7 @@ public class PGSQLPessoa implements PessoaDAO{
             p.setIdade(rs.getInt("Idade"));
         }
 
-
+        Connect.closeConnection(connect);
         return p;
     }
 
@@ -70,6 +70,7 @@ public class PGSQLPessoa implements PessoaDAO{
         statement.setString(1,CPF);
 
         ResultSet rs = statement.executeQuery();
+        Connect.closeConnection(connect);
 
     }
 
@@ -84,6 +85,7 @@ public class PGSQLPessoa implements PessoaDAO{
         statement.setString(4,pessoa.getCPF());
 
         ResultSet rs = statement.executeQuery();
+        Connect.closeConnection(connect);
     }
 
     @Override
@@ -97,5 +99,6 @@ public class PGSQLPessoa implements PessoaDAO{
         statement.setInt(4,pessoa.getIdade());
 
         ResultSet rs = statement.executeQuery();
+        Connect.closeConnection(connect);
     }
 }
